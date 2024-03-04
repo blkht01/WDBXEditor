@@ -298,7 +298,7 @@ namespace WDBXEditor.Storage
 				foreach (var field in header.ColumnMeta)
 				{
 					Type type = Data.Columns[c].DataType;
-					bool isneeded = field.CompressionType >= CompressionType.Sparse;
+					bool isneeded = field.CompressionType >= Constants.CompressionType.Sparse;
 
 					if (bytecounts.ContainsKey(type) && isneeded)
 					{
